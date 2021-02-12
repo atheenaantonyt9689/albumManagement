@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Django album</title>
+</head>
+<body>
+<header>
+    <h1><a href="{% url 'album-list' %}">Django blog</a></h1>
+</header>
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+</body>
+</html>
