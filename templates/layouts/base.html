@@ -7,6 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
     <title>Album example</title>
+    {% load static %}
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/album/">
 
@@ -47,7 +48,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="{% static 'css/album.css' %}" rel="stylesheet">
   </head>
   <body>
     
@@ -82,7 +83,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-  </div><h1><a href="{% url 'album-list' %}">Django blog</a></h1>
+  </div><h1><a href="{% url 'album-list' %}">Album lists</a></h1>
 </header>
 <main role="main">
     

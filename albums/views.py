@@ -9,6 +9,6 @@ class AlbumListView(ListView):
     template_name = "albums/album-list.html"
 
 class AlbumDetailView(DetailView):
-    model=Album
+    model = Album
     template_name='albums/album-detail.html'
 
