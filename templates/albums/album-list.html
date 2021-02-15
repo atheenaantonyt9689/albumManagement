@@ -3,7 +3,7 @@
     {% for album in object_list %}
      <div class="post-entry">
         <h2><a href="{% url 'album-detail' album.pk %}">{{ album.title }}</a></h2>
-        <p>{{ album.description }}</p>
+        <!--p>{{ album.description }}</p-->
      </div>
     {% endfor %}
 {% endblock content %}
