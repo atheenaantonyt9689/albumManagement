@@ -90,10 +90,23 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-  </div><h3><a href="{% url 'album-list' %}">album lists</a></h3>
+  </div>
+  <h3><a href="{% url 'album-list' %}">album lists</a></h3>
+  <div class="nav-left">
+  <h3><a href="{% url 'album-list' %}">Album Management</a></h3>
+  </div>
   
 </header>
 <main role="main">
+  {% if user.is_authenticated %}
+    <p>Hi{{user.username}}!</p>
+    <p><a href="{% url 'logout' %}">Log out</a></p>
+
+  {% else %}
+    <p>You are not logged in.</p>
+    <a href="{% url 'login'%}">LOG In</a>
+  {% endif %}
+
     
     {% block content %}
     {% endblock content %}
