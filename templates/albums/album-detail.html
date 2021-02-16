@@ -2,6 +2,7 @@
 {% block content %}
     <div class="post-entry">
         <section class="jumbotron text-center">
+          
             <div class="container">
               
               <h1>{{object.title}}</h1>
@@ -40,7 +41,9 @@
                 </div>
                 {% endfor %}
                 </div>
-               
+                <a href="{% url 'album-edit' album.pk %}">+ Edit Album</a>
+                <a href="{% url 'photo-edit' album.pk %}">+ Edit photo</a>
+                <p><a href="{% url 'album_delete' album.pk %}">+ Delete Album</a></p>
                 </div>
                 
                 </div>

@@ -6,7 +6,7 @@ class Album(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     def get_absolute_url(self): 
-        return reverse('album_detail', args=[str(self.id)])
+        return reverse('album-detail', args=[str(self.id)])
     
     def __str__(self):
         return self.title
