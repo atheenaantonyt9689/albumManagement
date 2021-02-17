@@ -5,6 +5,7 @@ from django.urls import reverse
 class Album(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
+    user=models.ForeignKey('auth.User',on_delete=models.CASCADE)
     def get_absolute_url(self): 
         return reverse('album-detail', args=[str(self.id)])
     
@@ -15,7 +16,6 @@ class Photo(models.Model):
     description = models.TextField()
     posted_at = models.DateTimeField()
     album = models.ForeignKey(Album,on_delete=models.CASCADE)
-
     def __str__(self):
         return self.image_url
 
